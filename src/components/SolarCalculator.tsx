@@ -149,7 +149,7 @@ export default function SolarCalculator() {
             <YAxis stroke="hsl(220 10% 55%)" fontSize={12} tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`} tickLine={false} />
             <Tooltip
               contentStyle={{ background: "hsl(220 18% 8%)", border: "1px solid hsl(220 15% 16%)", borderRadius: "8px", color: "hsl(45 10% 92%)" }}
-              formatter={(value: number) => [`$${value.toLocaleString()}`, ""]}
+              formatter={(value: any) => [`$${Number(value).toLocaleString()}`, ""]}
             />
             <Area type="monotone" dataKey="savings" stroke="hsl(160 60% 45%)" fill="url(#savingsGrad)" strokeWidth={2} name="Total Savings" />
             <Area type="monotone" dataKey="cost" stroke="hsl(45 100% 50%)" fill="none" strokeWidth={2} strokeDasharray="5 5" name="System Cost" />
